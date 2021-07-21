@@ -2,7 +2,8 @@
     <string name="app_name">ShoeStore</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="welcome">Welcome,</string>
+    <string name="welcome_comma">Welcome,</string>
+    <string name="welcome">Welcome</string>
     <string name="login_to_continue">Login to continue!</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -12,6 +13,7 @@
     <string name="proceed">Proceed</string>
     <string name="instruction_header">Instructions,</string>
     <string name="instruction">Select the shoe you are interested in from the list, this will take you to another screen where you can see more details about the shoe.</string>
+    <string name="instructions">Instructions</string>
     <string name="_continue">Continue</string>
     <string name="name">Name</string>
     <string name="company">Company</string>
@@ -20,5 +22,9 @@
     <string name="save">Save</string>
     <string name="add_new_shoe">Add new shoe</string>
     <string name="cancel">Cancel</string>
+    <string name="read_instructions">Read Instructions</string>
+    <string name="shoe_list">Shoe List</string>
+    <string name="shoe_detail">Shoe Detail</string>
+    <string name="logout">Logout</string>
     />
 </resources>

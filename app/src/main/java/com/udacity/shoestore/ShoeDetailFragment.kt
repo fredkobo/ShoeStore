@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 
 class ShoeDetailFragment : Fragment() {
@@ -14,10 +15,23 @@ class ShoeDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val binding : FragmentShoeDetailBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_shoe_detail, container, false)
+        val binding: FragmentShoeDetailBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_shoe_detail, container, false
+        )
+
+        binding.cancelButton.setOnClickListener { view: View ->
+            view.findNavController().popBackStack()
+        }
+
+        binding.saveButton.setOnClickListener { view: View ->
+            addNewShoe(view)
+        }
         return binding.root
+    }
+
+    private fun addNewShoe(view: View) {
+        view.findNavController().popBackStack()
+        //todo add new shoe to viewModel
     }
 
 }

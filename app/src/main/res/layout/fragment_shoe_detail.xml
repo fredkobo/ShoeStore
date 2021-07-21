@@ -2,9 +2,17 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="16dp"
         android:orientation="vertical"
         tools:context=".ShoeDetailFragment">
 
@@ -22,7 +30,8 @@
             android:ems="10"
             android:fontFamily="@font/roboto"
             android:hint="@string/name"
-            android:inputType="text" />
+            android:inputType="text"
+            android:text="@{shoe.name}" />
 
         <TextView
             android:id="@+id/company_text"
@@ -36,7 +45,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/company"
-            android:inputType="text" />
+            android:inputType="text"
+            android:text="@{shoe.company}" />
 
         <TextView
             android:id="@+id/shoe_size_text"
@@ -50,7 +60,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/shoe_size"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:text="@{Double.toString(shoe.size)}" />
 
         <TextView
             android:id="@+id/description_text"
@@ -64,20 +75,15 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/description"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="@{shoe.description}" />
 
         <Button
             android:id="@+id/save_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/save"
-            android:layout_marginTop="64dp"/>
-
-        <Button
-            android:id="@+id/add_new_shoe_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/add_new_shoe" />
+            android:layout_marginTop="64dp"
+            android:text="@string/save" />
 
         <Button
             android:id="@+id/cancel_button"

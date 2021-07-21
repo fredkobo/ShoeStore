@@ -15,7 +15,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="64dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="@string/welcome"
+            android:text="@string/welcome_comma"
             android:textSize="48sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,14 +35,14 @@
             app:layout_constraintTop_toBottomOf="@+id/instruction_header_text" />
 
         <Button
-            android:id="@+id/continue_button"
+            android:id="@+id/read_instructions_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto"
-            android:text="@string/proceed"
+            android:text="@string/read_instructions"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
