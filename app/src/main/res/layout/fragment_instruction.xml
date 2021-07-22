@@ -6,42 +6,41 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".InstructionFragment">
+        tools:context=".view.InstructionFragment">
 
         <TextView
             android:id="@+id/instruction_header_text"
+            style="@style/large_bold_heading_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="64dp"
-            android:fontFamily="@font/roboto_bold"
             android:text="@string/instruction_header"
-            android:textSize="48sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/instrction_text"
+            style="@style/medium_heading_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/roboto"
             android:text="@string/instruction"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/instruction_header_text" />
 
         <Button
             android:id="@+id/continue_button"
+            style="@style/base_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/roboto"
+            android:background="@drawable/positive_action_button_background"
             android:text="@string/_continue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

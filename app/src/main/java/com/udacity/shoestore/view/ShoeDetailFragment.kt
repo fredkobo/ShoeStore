@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewmodels.ShoeViewModel

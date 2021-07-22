@@ -14,14 +14,14 @@
         android:layout_height="match_parent"
         android:layout_margin="16dp"
         android:orientation="vertical"
-        tools:context=".ShoeDetailFragment">
+        tools:context=".view.ShoeDetailFragment">
 
         <TextView
             android:id="@+id/name_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:text="@string/name" />
+            android:text="@string/name"
+            style="@style/form_label_text"/>
 
         <EditText
             android:id="@+id/name_edit"
@@ -31,13 +31,15 @@
             android:fontFamily="@font/roboto"
             android:hint="@string/name"
             android:inputType="text"
-            android:text="@{shoe.name}" />
+            android:text="@{shoe.name}"
+            style="@style/form_edit_text"/>
 
         <TextView
             android:id="@+id/company_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/company" />
+            android:text="@string/company"
+            style="@style/form_label_text"/>
 
         <EditText
             android:id="@+id/company_edit"
@@ -46,13 +48,15 @@
             android:ems="10"
             android:hint="@string/company"
             android:inputType="text"
-            android:text="@{shoe.company}" />
+            android:text="@{shoe.company}"
+            style="@style/form_edit_text"/>
 
         <TextView
             android:id="@+id/shoe_size_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shoe_size" />
+            android:text="@string/shoe_size"
+            style="@style/form_label_text"/>
 
         <EditText
             android:id="@+id/shoe_size_edit"
@@ -61,13 +65,15 @@
             android:ems="10"
             android:hint="@string/shoe_size"
             android:inputType="numberDecimal"
-            android:text="@{Double.toString(shoe.size)}" />
+            android:text="@{Double.toString(shoe.size)}"
+            style="@style/form_edit_text"/>
 
         <TextView
             android:id="@+id/description_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/description" />
+            android:text="@string/description"
+            style="@style/form_label_text"/>
 
         <EditText
             android:id="@+id/description_edit"
@@ -76,20 +82,26 @@
             android:ems="10"
             android:hint="@string/description"
             android:inputType="textPersonName"
-            android:text="@{shoe.description}" />
+            android:text="@{shoe.description}"
+            style="@style/form_edit_text"/>
 
         <Button
             android:id="@+id/save_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
-            android:text="@string/save" />
+            android:text="@string/save"
+            android:background="@drawable/positive_action_button_background"
+            style="@style/base_button"/>
 
         <Button
             android:id="@+id/cancel_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@android:string/cancel" />
+            android:text="@android:string/cancel"
+            android:background="@drawable/negative_action_button_background"
+            android:layout_marginTop="8dp"
+            style="@style/base_button"/>
 
     </LinearLayout>
 </layout>

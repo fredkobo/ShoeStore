@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.view
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,11 +6,13 @@ import android.util.TypedValue
 import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewmodels.ShoeViewModel
@@ -28,7 +30,9 @@ class ShoeListFragment : Fragment() {
         )
         binding.addFloatingButton.setOnClickListener { view: View ->
             view.findNavController().navigate(
-                ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment(null)
+                ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment(
+                    null
+                )
             )
         }
 
@@ -59,16 +63,23 @@ class ShoeListFragment : Fragment() {
         )
         val padding = resources.getDimensionPixelOffset(R.dimen.list_item_padding)
         textView.setPadding(padding, padding, padding, padding)
+        context?.let {
+
+        }
         val backgroundColor = if (position % 2 == 0) {
-            Color.CYAN
+            ContextCompat.getColor(requireContext(), R.color.colorPrimaryVeryLight)
         } else {
-            Color.BLUE
+            ContextCompat.getColor(requireContext(), R.color.colorAccentVeyLight)
         }
         textView.setBackgroundColor(backgroundColor)
         textView.setTextColor(Color.BLACK)
         textView.setOnClickListener { view: View ->
             view.findNavController()
-                .navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment(shoe))
+                .navigate(
+                    ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment(
+                        shoe
+                    )
+                )
         }
         return textView
     }

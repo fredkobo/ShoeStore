@@ -9,7 +9,7 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="create_new_account">Create new account</string>
-    <string name="shoe_description">The Shoe Store App allows you to do conveniently shop for shoes from your phone.</string>
+    <string name="shoe_description">The Shoe Store App allows you to do conveniently view the catalogue of shoes from your phone.</string>
     <string name="proceed">Proceed</string>
     <string name="instruction_header">Instructions,</string>
     <string name="instruction">Select the shoe you are interested in from the list, this will take you to another screen where you can see more details about the shoe.</string>
@@ -26,5 +26,6 @@
     <string name="shoe_list">Shoe List</string>
     <string name="shoe_detail">Shoe Detail</string>
     <string name="logout">Logout</string>
+    <string name="hey_there">Hey there,</string>
     />
 </resources>

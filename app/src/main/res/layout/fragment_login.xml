@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginFragment">
+        tools:context=".view.LoginFragment">
 
         <TextView
             android:id="@+id/welcome_text"
@@ -14,10 +14,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="64dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/welcome_comma"
+            android:text="@string/hey_there"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/large_bold_heading_text" />
 
         <TextView
             android:id="@+id/login_to_continue_text"
@@ -25,10 +25,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/roboto"
             android:text="@string/login_to_continue"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
+            app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+            style="@style/medium_heading_text"/>
 
         <TextView
             android:id="@+id/email_label_text"
@@ -36,10 +36,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-            android:fontFamily="@font/roboto"
             android:text="@string/email"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_to_continue_text" />
+            app:layout_constraintTop_toBottomOf="@+id/login_to_continue_text"
+            style="@style/form_label_text"/>
 
         <EditText
             android:id="@+id/email_edit"
@@ -49,12 +49,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:fontFamily="@font/roboto"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_label_text" />
+            app:layout_constraintTop_toBottomOf="@+id/email_label_text"
+            style="@style/form_edit_text"/>
 
         <TextView
             android:id="@+id/password_text"
@@ -62,10 +62,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/roboto"
             android:text="@string/password"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_edit" />
+            app:layout_constraintTop_toBottomOf="@+id/email_edit"
+            style="@style/form_label_text"/>
 
         <EditText
             android:id="@+id/password_edit"
@@ -79,16 +79,18 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_text" />
+            app:layout_constraintTop_toBottomOf="@+id/password_text"
+            style="@style/form_edit_text"/>
 
         <Button
             android:id="@+id/login_button"
+            style="@style/base_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/roboto"
+            android:background="@drawable/positive_action_button_background"
             android:text="@string/login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,10 +103,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/roboto"
             android:text="@string/create_new_account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_button" />
+            app:layout_constraintTop_toBottomOf="@+id/login_button"
+            android:background="@drawable/negative_action_button_background"
+            style="@style/base_button"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

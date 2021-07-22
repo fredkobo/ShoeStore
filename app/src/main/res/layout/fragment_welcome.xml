@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".WelcomeFragment">
+        tools:context=".view.WelcomeFragment">
 
         <TextView
             android:id="@+id/instruction_header_text"
@@ -14,11 +14,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="64dp"
-            android:fontFamily="@font/roboto_bold"
             android:text="@string/welcome_comma"
-            android:textSize="48sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/large_bold_heading_text"/>
 
         <TextView
             android:id="@+id/instrction_text"
@@ -27,12 +26,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/roboto"
             android:text="@string/shoe_description"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/instruction_header_text" />
+            app:layout_constraintTop_toBottomOf="@+id/instruction_header_text"
+            style="@style/medium_heading_text"/>
 
         <Button
             android:id="@+id/read_instructions_button"
@@ -41,13 +39,14 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/roboto"
             android:text="@string/read_instructions"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/instrction_text"
-            app:layout_constraintVertical_bias="0.84000003" />
+            app:layout_constraintVertical_bias="0.84000003"
+            android:background="@drawable/positive_action_button_background"
+            style="@style/base_button"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

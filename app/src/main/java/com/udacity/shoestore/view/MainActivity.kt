@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.view
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -10,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import timber.log.Timber
 
